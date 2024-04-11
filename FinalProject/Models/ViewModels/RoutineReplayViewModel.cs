@@ -8,11 +8,11 @@ using System.Diagnostics;
 
 namespace FinalProject.Models.ViewModels;
 
-internal partial class LiveBroadcastViewModel : ObservableObject
+internal partial class RoutineReplayViewModel : ObservableObject
 {
     private IPopupService _popupService;
     //constructor
-    public LiveBroadcastViewModel()
+    public RoutineReplayViewModel()
     {
         Competitor = new FemaleCompetitor("PATTERSON Carly", 416, "USA");
         CurrentRoutine = new Routine("Womens", "Beam");

@@ -14,9 +14,9 @@
         Route="MainPage" />
 
         <ShellContent
-        Title="Live Broadcast"
-        ContentTemplate="{DataTemplate local:LiveBroadcast}"
-        Route="LiveBroadcast" />
+        Title="Routine Replay"
+        ContentTemplate="{DataTemplate local:RoutineReplay}"
+        Route="RoutineReplay" />
 
         <ShellContent
         Title="Live Scores"

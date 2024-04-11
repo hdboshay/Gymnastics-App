@@ -8,7 +8,7 @@ namespace FinalProject
         {
             InitializeComponent();
 
-            Routing.RegisterRoute("LiveBroadcast", typeof(LiveBroadcast));
+            Routing.RegisterRoute("RoutineReplay", typeof(RoutineReplay));
             Routing.RegisterRoute("LiveScores", typeof(LiveScores));
         }
     }

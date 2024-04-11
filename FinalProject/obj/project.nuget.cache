@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "l1dj3doHylFgBFXTnP+VXuz6lN99QVQMWfTL9IuEkLE5FqXeKVY2SBXt+7uq2Af787hIiPvYdWv9f9G+8gTZOQ==",
+  "dgSpecHash": "dSKRiZzNpOAlzu374FovE3LyGdSregQyGznUGUwjYLbcQlCsLGwj7pYI0sqBiwZYHjMCTSV6fENw1cqdy20wRQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\josh\\Desktop\\FinalProject\\FinalProject\\FinalProject.csproj",
+  "projectFilePath": "C:\\Users\\josh\\Desktop\\Project\\ProjectRepo\\FinalProject\\FinalProject.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\josh\\.nuget\\packages\\communitytoolkit.maui\\8.0.1\\communitytoolkit.maui.8.0.1.nupkg.sha512",
     "C:\\Users\\josh\\.nuget\\packages\\communitytoolkit.maui.core\\8.0.1\\communitytoolkit.maui.core.8.0.1.nupkg.sha512",

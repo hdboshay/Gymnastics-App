@@ -2,9 +2,9 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:toolkit="http://schemas.microsoft.com/dotnet/2022/maui/toolkit"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="FinalProject.Pages.LiveBroadcast"
+             x:Class="FinalProject.Pages.RoutineReplay"
              xmlns:viewmodel="clr-namespace:FinalProject.Models.ViewModels"
-             x:DataType="viewmodel:LiveBroadcastViewModel"
+             x:DataType="viewmodel:RoutineReplayViewModel"
              Title="Live Broadcast">
 
     <ScrollView BackgroundColor="MidnightBlue">
@@ -72,8 +72,8 @@
                             <CollectionView.ItemsLayout>
                                 <GridItemsLayout Orientation="Vertical"/>
                             </CollectionView.ItemsLayout>
-                            
-                            
+
+
 
                             <CollectionView.ItemTemplate>
                                 <DataTemplate>

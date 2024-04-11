@@ -1,5 +1,4 @@
-﻿using CommunityToolkit.Mvvm.ComponentModel;
-using FinalProject.Models.DetailModels;
+﻿using FinalProject.Models.DetailModels;
 
 namespace FinalProject.Models.CompetitorModels;
 

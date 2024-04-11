@@ -9,7 +9,7 @@
     <MauiXaml Update="Pages\HomePage.xaml">
       <SubType>Designer</SubType>
     </MauiXaml>
-    <MauiXaml Update="Pages\LiveBroadcast.xaml">
+    <MauiXaml Update="Pages\RoutineReplay.xaml">
       <SubType>Designer</SubType>
     </MauiXaml>
     <MauiXaml Update="Pages\LiveScores.xaml">
