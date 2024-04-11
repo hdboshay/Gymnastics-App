@@ -1,7 +1,5 @@
-﻿using CommunityToolkit.Mvvm.Input;
-using FinalProject.Models.DetailModels;
+﻿using FinalProject.Models.DetailModels;
 using System.Collections.ObjectModel;
-using System.Diagnostics;
 
 namespace FinalProject.Models.RoutineModels;
 

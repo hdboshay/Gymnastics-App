@@ -30,7 +30,7 @@
     <AppXManifest Include="C:\Users\josh\Desktop\Project\ProjectRepo\FinalProject\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2024-04-11T08:15:19.073</Modified>
+      <Modified>2024-04-11T08:25:02.456</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
@@ -44,11 +44,11 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\josh\Desktop\Project\ProjectRepo\FinalProject\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\FinalProject.dll">
       <PackagePath>FinalProject.dll</PackagePath>
-      <Modified>2024-04-11T08:15:18.013</Modified>
+      <Modified>2024-04-11T08:25:01.252</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\josh\Desktop\Project\ProjectRepo\FinalProject\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\apphost.exe">
       <PackagePath>FinalProject.exe</PackagePath>
-      <Modified>2024-04-11T08:15:18.031</Modified>
+      <Modified>2024-04-11T08:25:01.345</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\josh\Desktop\Project\ProjectRepo\FinalProject\Resources\Raw\AboutAssets.txt">
       <PackagePath>AboutAssets.txt</PackagePath>
