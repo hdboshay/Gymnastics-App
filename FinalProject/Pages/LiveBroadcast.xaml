@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:toolkit="http://schemas.microsoft.com/dotnet/2022/maui/toolkit"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="FinalProject.Pages.LiveBroadcast"
+             xmlns:viewmodel="clr-namespace:FinalProject.Models.ViewModels"
+             x:DataType="viewmodel:LiveBroadcastViewModel"
+             Title="Live Broadcast">
+
+    <ScrollView BackgroundColor="MidnightBlue">
+        <VerticalStackLayout>
+            <Grid Margin="50,25" ColumnSpacing="50" RowSpacing="10">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="0.75*"/>
+                    <ColumnDefinition Width="0.25*"/>
+                </Grid.ColumnDefinitions>
+
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="740"/>
+                    <RowDefinition Height="106"/>
+                </Grid.RowDefinitions>
+
+                <Grid.Shadow>
+                    <Shadow Brush="Black" Offset="0,0" Radius="20" Opacity="0.6"/>
+                </Grid.Shadow>
+
+                <Frame Grid.Row="0" Grid.Column="0" BackgroundColor="Navy" CornerRadius="0" Padding="0" BorderColor="Gray">
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="*"/>
+                        </Grid.ColumnDefinitions>
+
+                        <Label Grid.Column="0" Text="REPLAY" FontSize="25" FontAttributes="Bold" Padding="10,0" TextColor="SkyBlue" BackgroundColor="Gray"  HorizontalOptions="StartAndExpand"/>
+                        <Label Grid.Column="1" Text="{Binding CurrentRoutine.Apparatus}" FontSize="25" FontAttributes="Bold" Padding="25,0" HorizontalOptions="EndAndExpand"/>
+                    </Grid>
+                </Frame>
+
+                <Frame Grid.Row="0" Grid.Column="1" BackgroundColor="Navy" CornerRadius="0" Padding="0" BorderColor="Transparent">
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="0.12*"/>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="0.15*"/>
+                        </Grid.ColumnDefinitions>
+
+                        <Border Grid.Column="0" Grid.ColumnSpan="2" Stroke="Gray" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+                            <Label Grid.Column="0" Grid.ColumnSpan="2" Text="ELEMENT NAME" FontSize="25" FontAttributes="Bold" VerticalTextAlignment="Center" HorizontalTextAlignment="Center"/>
+                        </Border>
+
+                        <Border Grid.Column="2" Stroke="Gray" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+                            <Label Grid.Column="2" Text="Level" FontSize="15" FontAttributes="Bold" VerticalTextAlignment="Center" HorizontalTextAlignment="Center"/>
+                        </Border>
+                    </Grid>
+                </Frame>
+
+                <Frame Grid.Row="1" Grid.Column="0" BackgroundColor="SteelBlue" CornerRadius="0" Padding="0">
+                    <toolkit:MediaElement
+                        x:Name="MediaElement"
+                        ShouldAutoPlay="False"
+                        Source="embed://exampleVideo.mp4"
+                        ShouldShowPlaybackControls="True"/>
+                </Frame>
+
+                <Frame Grid.Column="1" Grid.Row="1" Grid.RowSpan="2" BackgroundColor="Transparent" CornerRadius="0" Padding="0" BorderColor="Transparent">
+                    <ScrollView>
+                        <CollectionView
+                                ItemsSource="{Binding CurrentRoutine.Skills}"
+                                ItemSizingStrategy="MeasureAllItems"
+                                SelectionMode="None">
+                            <CollectionView.ItemsLayout>
+                                <GridItemsLayout Orientation="Vertical"/>
+                            </CollectionView.ItemsLayout>
+                            
+                            
+
+                            <CollectionView.ItemTemplate>
+                                <DataTemplate>
+                                    <Grid ColumnSpacing="5" RowSpacing="3">
+                                        <Grid.ColumnDefinitions>
+                                            <ColumnDefinition Width="*"/>
+                                        </Grid.ColumnDefinitions>
+
+                                        <Frame Grid.Column="0" Margin="0,3" Padding="0" BackgroundColor="SteelBlue" Opacity="0.75" CornerRadius="0">
+                                            <Grid ColumnSpacing="10">
+                                                <Grid.ColumnDefinitions>
+                                                    <ColumnDefinition Width="0.12*"/>
+                                                    <ColumnDefinition Width="*"/>
+                                                    <ColumnDefinition Width="0.15*"/>
+                                                </Grid.ColumnDefinitions>
+
+                                                <Grid.RowDefinitions>
+                                                    <RowDefinition Height="65"/>
+                                                </Grid.RowDefinitions>
+
+                                                <Label Grid.Column="0" Text="{Binding PosInRoutine}" FontSize="25" FontAttributes="Bold" BackgroundColor="Gray" TextColor="Navy" VerticalOptions="FillAndExpand" VerticalTextAlignment="Center" HorizontalOptions="FillAndExpand" HorizontalTextAlignment="Center">
+                                                </Label>
+                                                <Label Grid.Column="1" Text="{Binding Name}" FontSize="25" FontAttributes="Bold" VerticalOptions="FillAndExpand" VerticalTextAlignment="Center" HorizontalOptions="FillAndExpand"/>
+                                                <Label Grid.Column="2" Text="{Binding LetterRating}" FontSize="25" FontAttributes="Bold" BackgroundColor="DeepSkyBlue" VerticalOptions="FillAndExpand" VerticalTextAlignment="Center" HorizontalOptions="FillAndExpand" HorizontalTextAlignment="Center"/>
+                                            </Grid>
+                                        </Frame>
+                                    </Grid>
+                                </DataTemplate>
+                            </CollectionView.ItemTemplate>
+                        </CollectionView>
+                    </ScrollView>
+                </Frame>
+
+                <Border Grid.Row="2" BackgroundColor="SteelBlue" Stroke="Transparent" Padding="0">
+                    <Border.StrokeShape>
+                        <RoundRectangle CornerRadius="40,0,0,40" />
+                    </Border.StrokeShape>
+
+                    <Frame CornerRadius="0" Padding="10" BackgroundColor="Transparent">
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="0.85*"/>
+                                <ColumnDefinition Width="0.15*"/>
+                            </Grid.ColumnDefinitions>
+
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="*"/>
+                            </Grid.RowDefinitions>
+
+                            <Border Grid.Row="1" BackgroundColor="Navy" Stroke="DeepSkyBlue" StrokeThickness="5">
+                                <Border.StrokeShape>
+                                    <RoundRectangle CornerRadius="40,0,0,40" />
+                                </Border.StrokeShape>
+                                <Frame Grid.Column="0" BackgroundColor="Transparent" Padding="0">
+                                    <Grid>
+                                        <Grid.ColumnDefinitions>
+                                            <ColumnDefinition Width="0.2*"/>
+                                            <ColumnDefinition Width="0.15*"/>
+                                            <ColumnDefinition Width="*"/>
+                                        </Grid.ColumnDefinitions>
+
+                                        <Grid.RowDefinitions>
+                                            <RowDefinition Height="*"/>
+                                        </Grid.RowDefinitions>
+
+
+                                        <Label Grid.Column="0" Text="{Binding Competitor.Country}" FontSize="25" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" HorizontalTextAlignment="Start" VerticalTextAlignment="Center" Padding="25"/>
+                                        <Label Grid.Column="1" Text="{Binding Competitor.Bib}" FontSize="25" FontAttributes="Bold" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" HorizontalTextAlignment="Start" VerticalTextAlignment="Center" Padding="15"/>
+                                        <Label Grid.Column="2" Text="{Binding Competitor.Name}" FontSize="25" FontAttributes="Bold" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" HorizontalTextAlignment="Start" VerticalTextAlignment="Center"/>
+                                    </Grid>
+
+                                </Frame>
+                            </Border>
+
+                            <Frame Grid.Column="1" BackgroundColor="Transparent" BorderColor="Transparent" Padding="0">
+                                <Grid>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="*"/>
+                                    </Grid.ColumnDefinitions>
+
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="0.30*"/>
+                                        <RowDefinition Height="0.70*"/>
+                                    </Grid.RowDefinitions>
+
+                                    <Label Grid.Row="0" Text="Difficulty" FontSize="18" FontAttributes="Bold" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"/>
+                                    <Label Grid.Row="1" Text="{Binding CurrentRoutine.DScore}" FontSize="40" FontAttributes="Bold" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"/>
+                                </Grid>
+
+                            </Frame>
+                        </Grid>
+                    </Frame>
+                </Border>
+            </Grid>
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>
